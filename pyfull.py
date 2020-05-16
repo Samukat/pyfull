@@ -57,6 +57,15 @@ def ordlist_to_str(ls):
             raise TypeError('Type Error. Item at index {} is not an integer and/or cannot be converted into a integer'.format(i))
     return prd
 
+def fact(n):
+    if type(n) != int:
+        raise TypeError('A integer should be provided for this function! You provided {}.'.format(n))
+    
+    if n == 0:
+        return 1
+    
+    return n * fact(n-1)
+
 
     
 if __name__ == "__main__":
